@@ -1,0 +1,231 @@
+<section id="skills" class="skills01">
+
+    <div clASS="skl0">
+
+        <div class="main-title">
+            <h1 class="skl1">My Skills</h1>
+            <h3 class="skl2">Skills are not static</h3>
+            <h6 class="skl3">Here,are my skills which i have learnt.</h6>
+            </p>
+        </div>
+        <ul>
+            <li class="html">HTML</li><span class="fill">88%</span>
+            <li class="css">CSS</li><span class="fill">85%</span>
+            <li class="js">JavaScript</li><span class="fill">55%</span>
+            <li class="c">c-programing</li><span class="fill">62%</span>
+            <li class="py">python</li><span class="fill">65%</span>
+            <li class="ds">Datastructure</li><span class="fill">69%</span>
+        </ul>
+    </div>
+
+</section>
+
+
+
+
+<style>
+.skills01 {
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.skl1,
+.skl2,
+.skl3 {
+    text-align: center;
+    color: rgb(12, 39, 12);
+
+}
+
+.skl1 {
+    font-size: 50px;
+}
+
+
+.skl0 {
+    width: 500px;
+    height: 520px;
+    padding: 20px;
+    background-color: #2abc1c;
+    border-radius: 15%;
+    box-shadow: 0 0 20px rgba(34, 87, 43, 0.2);
+    position: relative;
+    top: 49%;
+    bottom: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill {
+    margin: 20px 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.fill {
+    height: 1px;
+    background-color: #bbe0c1;
+    border-radius: 5px;
+    animation: fill 2s ease-in-out reverse;
+    width: 0;
+    color: #000;
+}
+
+.skill span {
+    display: inline-block;
+    padding-left: 10px;
+    font-weight: normal;
+    text-align: left;
+}
+
+@keyframes fill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+li {
+    position: relative;
+    list-style: none;
+    margin: 20px 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    height: 4px;
+}
+
+li:before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(45, 49, 45, 0.5);
+    border-radius: 1000px;
+}
+
+li:after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 0;
+    height: 10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1000px;
+    animation-duration: .7s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+li.html:after {
+    animation-name: html;
+}
+
+@keyframes html {
+    to {
+        width: 88%;
+    }
+}
+
+li.css:after {
+    animation-name: css;
+    text-align: left;
+}
+
+@keyframes css {
+    to {
+        width: 80%;
+    }
+}
+
+li.js:after {
+    animation-name: js;
+}
+
+@keyframes js {
+    to {
+        width: 55%;
+    }
+}
+
+li.c:after {
+    animation-name: c;
+}
+
+@keyframes c {
+    to {
+        width: 62%;
+    }
+}
+
+li.py:after {
+    animation-name: py;
+}
+
+@keyframes py {
+    to {
+        width: 65%;
+    }
+}
+
+li.ds:after {
+    animation-name: ds;
+}
+
+@keyframes ds {
+    to {
+        width: 69%;
+    }
+}
+
+
+.edu {
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: -10%;
+
+}
+
+.edus {
+    background-color: #35eb53;
+    border-radius: 39%;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    width: 20%;
+    height: 4%;
+    margin: 28 auto;
+    position: absolute;
+    top: 8%;
+    bottom: 45%;
+    left: 49%;
+    right: 5%;
+    transform: translateX(-50%);
+}
+
+@keyframes movebottom {
+    0% {
+        transform: translateX(100%);
+        /* Start from the right */
+    }
+
+    100% {
+        transform: translateX(0%);
+        /* Move to the left */
+    }
+}
+</style>

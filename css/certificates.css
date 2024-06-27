@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+
+.certificates {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+input:checked + .slides .slide {
+    transform: translateX(0);
+}
+
+input#slide2:checked ~ .slides .slide {
+    transform: translateX(-100%);
+}
+
+input#slide3:checked ~ .slides .slide {
+    transform: translateX(-200%);
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nav-button {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input:checked + .slides + .navigation #nav-1 {
+    background-color: #0ece17;
+}
+
+input#slide2:checked ~ .navigation #nav-2 {
+    background-color:  #0ece17;
+}
+
+input#slide3:checked ~ .navigation #nav-3 {
+    background-color:  #0ece17;
+}
+
+.nav-button:hover {
+    background-color:  #0ece17;
+}
